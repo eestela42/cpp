@@ -1,6 +1,11 @@
 #include <iostream>
 #include <fstream>
 
+int		ft_replace(std::string str, std:;string replace, int start)
+{
+	
+}
+
 int		main(int ac, char **av)
 {
 	if (ac != 4)
@@ -18,6 +23,8 @@ int		main(int ac, char **av)
 		std::string str = std::string(buffer);
 		delete[] buffer;
 		is.close();
+		std::string origin = std::string(av[2]);
+		std::string replace = std::string(av[3]);
 		int i = 0;
 		int j;
 		int start;
@@ -26,10 +33,15 @@ int		main(int ac, char **av)
 		{
 			j = 0;
 			start = i;
-			while (av[2][j] && str[i] && av[2][j] == str[i])
+			while (origin[j] && str[i] && origin[j] == str[i])
 				j++; i++;
 			if (j > 0 && !av[2][j] && str[i])
-				
+			{
+				ft_replace(str, replace, start);
+				start + (int)str.length();
+			}
+			else
+				i = start + 1;	
 		}
 
 	}

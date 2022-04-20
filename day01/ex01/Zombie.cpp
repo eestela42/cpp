@@ -1,7 +1,7 @@
 #include "Zombie.hpp"
 
 		Zombie::Zombie(){
-	std::cout << "The Zombie " << this->name << " has spawned. Be carefull" << std::endl;
+	std::cout << "A Zombie has spawned. Be carefull" << std::endl;
 }
 
 		Zombie::~Zombie(){

@@ -1,7 +1,8 @@
-NAME = Sed_is_for_losers
+NAME = harlFilter
 CC = g++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp
+SRCS = main.cpp	\
+		Harl.cpp
 OBJS = ${SRCS:.cpp=.o}
 
 all: $(NAME)

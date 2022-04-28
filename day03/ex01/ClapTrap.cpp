@@ -2,7 +2,7 @@
 
 ClapTrap::ClapTrap(/* args */)
 {
-	std::cout << "ClapTrap no arg constructor called" << std::endl;
+	std::cout << "ClapTrap no arg constructor called for ClapTrap" << std::endl;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
 	this->_hitPoints = 10;
@@ -37,6 +37,11 @@ std::string	ClapTrap::getName()
 	return (this->_name);
 }
 
+void	ClapTrap::setName(const std::string name)
+{
+	this->_name = name;
+}
+
 int			ClapTrap::getStat(const std::string str)
 {
 	if (str == "EP")
@@ -46,6 +51,16 @@ int			ClapTrap::getStat(const std::string str)
 	if (str == "HP")
 		return (this->_hitPoints);
 	return (-1);
+}
+
+void	ClapTrap::setStat(const std::string str, const int value)
+{
+	if (str == "EP")
+		this->_energyPoints = value;
+	if (str == "AD")
+		this->_attackDamage = value;
+	if (str == "HP")
+		this->_hitPoints = value;
 }
 
 ClapTrap &ClapTrap::operator=(ClapTrap &tmp)

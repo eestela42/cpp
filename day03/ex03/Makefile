@@ -1,8 +1,11 @@
-NAME = VERSION_1
+NAME = VERSION_3
 CC = g++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 SRCS = main.cpp			\
-		ClapTrap.cpp
+		ClapTrap.cpp	\
+		ScavTrap.cpp	\
+		FragTrap.cpp	\
+		DiamondTrap.cpp
 OBJ = ${SRCS:.cpp=.o}
 
 all: $(NAME)

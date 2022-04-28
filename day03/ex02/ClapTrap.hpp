@@ -4,7 +4,7 @@
 #include <iostream>
 class ClapTrap
 {
-private:
+protected:
 	std::string	_name;
 	int	_hitPoints;
 	int	_energyPoints;
@@ -18,6 +18,8 @@ public:
 
 	std::string	getName();
 	int			getStat(const std::string str);
+	void		setName(const std::string name);
+	void		setStat(const std::string str, const int value);
 
 	ClapTrap	&operator=(ClapTrap &rsh);
 

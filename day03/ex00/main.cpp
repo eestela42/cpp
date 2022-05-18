@@ -4,7 +4,7 @@ int	main()
 {
 	ClapTrap	num1;
 	ClapTrap	num2("Joeh Bideon");
-	ClapTrap	num3 = num1;
+	ClapTrap	num3 = num2;
 	ClapTrap	num0(num2);
 
 	int i = 0;

@@ -5,7 +5,6 @@
 
 class Harl	{
 
-typedef  void	(Harl::*MemberFunction)(void);
 	private:
 	
 	void debug( void );
@@ -18,6 +17,7 @@ typedef  void	(Harl::*MemberFunction)(void);
 	Harl();
 	~Harl();
 	void complain( std::string level );
+	//typedef  void	(Harl::*MemberFunction)(void);
 };
 
 

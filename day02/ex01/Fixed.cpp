@@ -58,8 +58,6 @@ float	Fixed::toFloat() const
 
  std::ostream& operator<<(std::ostream &output, const Fixed & rhs)
  {
-	 std::ostream *fct = &output;
-	 if (fct)
-	 	output << rhs.toFloat();
-	return *fct;
+	output << rhs.toFloat();
+	return output;
  }

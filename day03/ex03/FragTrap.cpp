@@ -32,10 +32,14 @@ FragTrap::FragTrap(FragTrap &tmp)
 	this->_attackDamage = 30;
 }
 
-FragTrap	&FragTrap::operator=(const FragTrap &rsh)
+FragTrap	&FragTrap::operator=(const FragTrap &tmp)
 {
-	*this = rsh;
-	return *this;
+	std::cout << "FragTrap operator = called" << std::endl;
+	_attackDamage = tmp._attackDamage;
+	_name = tmp._name;
+	this->_hitPoints = tmp._hitPoints;
+	this->_energyPoints = tmp._energyPoints;
+	return (*this);
 }
 
 void	FragTrap::highFivesGuys()

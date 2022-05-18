@@ -51,8 +51,21 @@ int	main()
 	num10.beRepaired(1000);
 	num11.highFivesGuys();
 
-	DiamondTrap num12;
+	std::cout << "num12" << std::endl;
+	DiamondTrap	num12;
+	std::cout << "num13" << std::endl;
+	DiamondTrap	num13("Silco de la leaague");
+	std::cout << "num14" << std::endl;
+	DiamondTrap	num14 = num12;
+	std::cout << "num15" << std::endl;
+	DiamondTrap	num15(num13);
 
+	num12.attack("Jean");
 	num12.whoAmI();
+	num13.beRepaired(142);
+	num13.whoAmI();
+	num14.highFivesGuys();
+	num14.whoAmI();
+	num15.whoAmI();
 
 }

@@ -11,12 +11,12 @@ FragTrap::FragTrap(/* args */)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "A FragTrap has despawned, he was named" << this->_name << std::endl;
+	std::cout << "A FragTrap has despawned, he was named " << this->_name << std::endl;
 }
 
 FragTrap::FragTrap(std::string str)
 {
-	std::cout << "A FragTrap has spawned with string, he is named" << str << std::endl;
+	std::cout << "A FragTrap has spawned with string, he is named " << str << std::endl;
 	this->_name = str;
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
@@ -25,17 +25,21 @@ FragTrap::FragTrap(std::string str)
 
 FragTrap::FragTrap(FragTrap &tmp)
 {
-	std::cout << "A FragTrap has spawned with copy, he is also named" << tmp._name << std::endl;
+	std::cout << "A FragTrap has spawned with copy, he is also named " << tmp._name << std::endl;
 	this->_name = tmp._name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
 }
 
-FragTrap	&FragTrap::operator=(const FragTrap &rsh)
+FragTrap	&FragTrap::operator=(const FragTrap &tmp)
 {
-	*this = rsh;
-	return *this;
+	std::cout << "FragTrap operator = called" << std::endl;
+	_attackDamage = tmp._attackDamage;
+	_name = tmp._name;
+	this->_hitPoints = tmp._hitPoints;
+	this->_energyPoints = tmp._energyPoints;
+	return (*this);
 }
 
 void	FragTrap::highFivesGuys()

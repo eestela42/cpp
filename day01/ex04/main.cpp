@@ -17,8 +17,12 @@ int		main(int ac, char **av)
 	std::string origin = std::string(av[2]);
 	std::string replace = std::string(av[3]);
 	std::ifstream is (file_name, std::ifstream::in);
-	if (is.is_open())
-		std::ofstream os (file_name + ".replace", std::ios_base::out);
+	if (!is.is_open())
+	{
+		std::cout << "Error when opening the file" << std::endl;
+		return (1);
+	}
+	std::ofstream os (file_name + ".replace", std::ios_base::out);
 	if (is.is_open() && os.is_open())
 	{
 		is.seekg (0, is.end);
@@ -33,7 +37,6 @@ int		main(int ac, char **av)
 		int j;
 		int start;
 		int end;
-		std::cout << "villa en eau\n";
 		while (str[i])
 		{
 			j = 0;
@@ -54,6 +57,6 @@ int		main(int ac, char **av)
 		os.close();
 		return (0);
 	}
-	std::cout << "villa en feu \n";
+	std::cout << "Error when making the .repalce file" << std::endl;
 	return (1);
 }

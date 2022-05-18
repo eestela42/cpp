@@ -32,10 +32,14 @@ ScavTrap::ScavTrap(ScavTrap &tmp)
 	this->_attackDamage = tmp.getStat("AD");
 }
 
-ScavTrap	&ScavTrap::operator=(const ScavTrap &rsh)
+ScavTrap	&ScavTrap::operator=(const ScavTrap &tmp)
 {
-	*this = rsh;
-	return *this;
+	std::cout << "ClapTrap operator = called" << std::endl;
+	_attackDamage = tmp._attackDamage;
+	_name = tmp._name;
+	this->_hitPoints = tmp._hitPoints;
+	this->_energyPoints = tmp._energyPoints;
+	return (*this);
 }
 
 void	ScavTrap::attack(const std::string &target)

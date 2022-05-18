@@ -3,23 +3,31 @@
 DiamondTrap::DiamondTrap()
 {
 	std::cout << "DiamondTrap Didi was created using no arg" << std::endl;
-	this->initDiamond("Didi");
+	this->_name = "Didi";
+	ClapTrap::_name = "Didi_clap_name";
+	this->_hitPoints = FragTrap::_hitPoints;
+	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_attackDamage = FragTrap::_attackDamage;
 }
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "DiamondTrap " << this->_name << "was destroyed" << std::endl;
+	std::cout << "DiamondTrap " << this->_name << " was destroyed" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string str)
+DiamondTrap::DiamondTrap(std::string name)
 {
-	std::cout << "DiamondTrap" << str << " was created using a string" << std::endl;
-	this->initDiamond(str);
+	std::cout << "DiamondTrap " << name << " was created using a string" << std::endl;
+	this->_name = name;
+	ClapTrap::_name = name + "_clap_name";
+	this->_hitPoints = FragTrap::_hitPoints;
+	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_attackDamage = FragTrap::_attackDamage;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &tmp)
 {
-	std::cout << "DiamondTrap" << tmp._name << " was created using copy" << std::endl;
+	std::cout << "DiamondTrap " << tmp._name << " was created using copy" << std::endl;
 	this->_name = tmp._name;
 	ClapTrap::_name = tmp._name + "_clap_name";
 	this->_hitPoints = tmp._hitPoints;
@@ -27,13 +35,14 @@ DiamondTrap::DiamondTrap(const DiamondTrap &tmp)
 	this->_attackDamage = tmp._attackDamage;
 }
 
-void	DiamondTrap::initDiamond(const std::string name)
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap &tmp)
 {
-	ClapTrap::_name = name + "_clap_name";
-	this->_name = name;
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
-	this->_attackDamage = FragTrap::_attackDamage;
+	std::cout << "DiamondTrap operator = called" << std::endl;
+	_attackDamage = tmp._attackDamage;
+	_name = tmp._name;
+	this->_hitPoints = tmp._hitPoints;
+	this->_energyPoints = tmp._energyPoints;
+	return (*this);
 }
 
 void	DiamondTrap::whoAmI()

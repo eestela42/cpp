@@ -1,6 +1,6 @@
 NAME = VERSION_3
 CC = g++
-FLAGS = -Wall -Werror -Wextra -std=c++98
+FLAGS = -Wall -Werror -Wextra -std=c++98 -Wno-shadow
 SRCS = main.cpp			\
 		ClapTrap.cpp	\
 		ScavTrap.cpp	\

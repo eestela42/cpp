@@ -17,7 +17,7 @@
 
 		Animal &operator=(Animal &rsa);
 
-		virtual void makeSound() const;
+		virtual void makeSound()const = 0;
 
 
 	};

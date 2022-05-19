@@ -1,5 +1,5 @@
 NAME = My_Awesome_PhoneBook
-CC = g++
+CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 SRCS =	main.cpp		\
 		Contact.cpp		\
@@ -13,7 +13,7 @@ $(NAME): $(OBJS)
 		$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
 clean:
-		rm -f $(OBJ)
+		rm -f $(OBJS)
 
 fclean: clean
 		rm -f $(NAME)

@@ -1,5 +1,5 @@
 NAME = More_Brainz
-CC = g++
+CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 SRCS = main.cpp				\
 		zombieHorde.cpp		\

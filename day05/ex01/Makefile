@@ -2,23 +2,21 @@ NAME = ex01
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
-INC = Animal.hpp		\
-		Dog.hpp			\
-		Cat.hpp			\
-		Brain.hpp
+INC = Bureaucrat.hpp	\
+		Form.hpp
 
 SRCS = main.cpp			\
-		Animal.cpp		\
-		Dog.cpp			\
-		Cat.cpp			\
-		Brain.cpp
+		Bureaucrat.cpp	\
+		Form.cpp		
+		
+	
 
 OBJS = ${SRCS:.cpp=.o}
 
 all : $(NAME)
 
-$(NAME) : $(OBJS)
-		$(CC) $(FLAGS) $(SRCS) $(INC) -o $(NAME)
+$(NAME) : $(OBJS) $(INC)
+		$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean :
 		rm -f $(OBJS)

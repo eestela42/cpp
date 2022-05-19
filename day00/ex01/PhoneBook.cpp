@@ -10,29 +10,29 @@ void	PhoneBook::input_info()
 {
 	std::string	str = "";
 
-	std::cout << "Enter the name :";
 	while (str == "")	{
+		std::cout << "Enter the name :";
 		std::getline(std::cin,str);		}
 	Repertory[i].setName(str);
-	std::cout << "Enter the last name :";
 	str = "";
 	while (str == "")	{
+		std::cout << "Enter the last name :";
 		 std::getline(std::cin,str);	}
 	Repertory[i].setLast_name(str);
-	std::cout << "Enter the nickname :";
 	str = "";
 	while (str == "")	{
-		 std::getline(std::cin,str);	}
+		std::cout << "Enter the nickname :";
+		std::getline(std::cin,str);	}
 	Repertory[i].setNickname(str);
-	std::cout << "Enter the phone number :";
 	str = "";
 	while (str == "")	{
-		 std::getline(std::cin,str);	}
+		std::cout << "Enter the phone number :";
+		std::getline(std::cin,str);	}
 	Repertory[i].setPhone_number(str);
-	std::cout << "Enter the DARKEST SECRET :";
 	str = "";
 	while (str == "")	{
-		 std::getline(std::cin,str);	}
+		std::cout << "Enter the DARKEST SECRET :";
+		std::getline(std::cin,str);	}
 	Repertory[i].setDarkest_secret(str);
 }
 

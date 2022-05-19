@@ -1,5 +1,5 @@
 NAME = HI_THIS_IS_BRAIN
-CC = g++
+CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 SRCS = main.cpp
 

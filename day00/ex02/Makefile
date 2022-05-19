@@ -1,5 +1,5 @@
 NAME = Account.exe
-CC = g++
+CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 SRCS = Account.cpp	\
 		tests.cpp

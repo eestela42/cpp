@@ -5,7 +5,7 @@ int	main()
 	PhoneBook 	PhoneBook;
 	std::string	str= "";
 
-	while (str != "EXIT")
+	while (str != "EXIT" && !std::cin.eof())
 	{
 		std::cout << "waiting..." << std::endl;
 		std::getline(std::cin, str);

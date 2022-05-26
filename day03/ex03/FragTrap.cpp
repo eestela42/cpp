@@ -11,7 +11,7 @@ FragTrap::FragTrap(/* args */)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "A FragTrap has despawned, he was named" << this->_name << std::endl;
+	std::cout << "A FragTrap has despawned, he was named " << this->_name << std::endl;
 }
 
 FragTrap::FragTrap(std::string str)

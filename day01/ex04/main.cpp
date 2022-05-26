@@ -10,7 +10,7 @@ int		main(int ac, char **av)
 	}
 	if (!av[1] || !av[2] || !av[3])
 	{
-		std::cout << "error one or multiple arguments are empty" << std::endl;
+		std::cout << "error : one or multiple arguments are empty" << std::endl;
 		return (1);
 	}
 	std::string file_name = std::string(av[1]);
@@ -23,13 +23,13 @@ int		main(int ac, char **av)
 		return (1);
 	}
 	std::ofstream os (file_name + ".replace", std::ios_base::out);
-	if (is.is_open() && os.is_open())
+	if (os.is_open())
 	{
 		is.seekg (0, is.end);
     	int length = is.tellg();
     	is.seekg (0, is.beg);
 		char * buffer = new char [length + 1];
-		is.read (buffer,length); // check si read nul term
+		is.read (buffer,length);
 		std::string str (buffer);
 		delete[] buffer;
 		is.close();

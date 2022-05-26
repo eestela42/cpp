@@ -7,7 +7,10 @@ int	main()
 
 	Marc.announce();
 	Tibs = newZombie("Tibs");
-	Tibs->announce();
+	if (Tibs)
+	{
+		Tibs->announce();
+		delete(Tibs);
+	}
 	randomChump("Kyky");
-	delete(Tibs);
 }

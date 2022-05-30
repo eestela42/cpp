@@ -46,7 +46,7 @@ int	Fixed::toInt() const
 
 float	Fixed::toFloat() const
 {
-	return static_cast<float> (this->_value) / (1 << this->_dot);
+	return (float) (this->_value) / (1 << this->_dot);
 }
 
  std::ostream& operator<<(std::ostream &output, const Fixed & rhs)
@@ -100,6 +100,7 @@ bool	Fixed::operator!=(const Fixed &nbr) const
 Fixed	Fixed::operator+(const Fixed &nbr)
 {
 	Fixed	tmp;
+
 	tmp.setRawBits(this->_value + nbr.getRawBits());
 	return tmp;
 }
@@ -107,22 +108,25 @@ Fixed	Fixed::operator+(const Fixed &nbr)
 Fixed	Fixed::operator-(const Fixed &nbr)
 {
 	Fixed	tmp;
+
 	tmp.setRawBits(this->_value - nbr.getRawBits());
 	return tmp;
 }
 Fixed	Fixed::operator*(const Fixed &nbr)
 {
 	Fixed	tmp;
-	tmp.setRawBits(this->_value * nbr.getRawBits() >> this->_dot);
+	
+	tmp.setRawBits(this->toInt() * nbr.toInt() * (1 << this->_dot));
 	return tmp;
 }
 Fixed	Fixed::operator/(const Fixed &nbr)
 {
 	Fixed	tmp;
-	tmp.setRawBits((this->_value << this->_dot) / nbr.getRawBits());
+
+	tmp.setRawBits((this->toInt() / nbr.toInt()) * ( 1 << this->_dot));
 	return tmp;
 }
-
+// IL Y A DES PROBELEMS
 /* iterators */
 
 Fixed	Fixed::operator++(void)

@@ -8,7 +8,7 @@ class Fixed
 {
 private:
 	int	_value;
-	const int	_dot = 8;
+	const int static	_dot = 8;
 public:
 	Fixed();
 	~Fixed();

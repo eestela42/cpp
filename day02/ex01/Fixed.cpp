@@ -53,7 +53,7 @@ int	Fixed::toInt() const
 
 float	Fixed::toFloat() const
 {
-	return static_cast<float> (this->_value) / (1 << this->_dot);
+	return (float)(this->_value) / (1 << this->_dot);
 }
 
  std::ostream& operator<<(std::ostream &output, const Fixed & rhs)

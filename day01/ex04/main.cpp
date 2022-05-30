@@ -22,13 +22,8 @@ int		main(int ac, char **av)
 		std::cout << "Error when opening the file" << std::endl;
 		return (1);
 	}
-<<<<<<< HEAD
 	std::ofstream os ((file_name + ".replace").c_str(), std::ios_base::out);
 	if (is.is_open() && os.is_open())
-=======
-	std::ofstream os (file_name + ".replace", std::ios_base::out);
-	if (os.is_open())
->>>>>>> c27eb36010938bcb646b2180c5ef95f54997749d
 	{
 		is.seekg (0, is.end);
     	int length = is.tellg();

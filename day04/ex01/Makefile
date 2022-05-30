@@ -15,10 +15,13 @@ SRCS = main.cpp			\
 
 OBJS = ${SRCS:.cpp=.o}
 
+%.o : %.cpp
+	$(CC) $(FLAGS) -o $@ -c $<
+
 all : $(NAME)
 
-$(NAME) : $(OBJS)
-		$(CC) $(FLAGS) $(SRCS) $(INC) -o $(NAME)
+$(NAME) : $(OBJS) $(INC)
+		$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean :
 		rm -f $(OBJS)

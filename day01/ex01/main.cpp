@@ -12,5 +12,6 @@ int	main()	{
 	while (i < N)
 		horde[i++].announce();
 	delete [] horde;
+	horde = zombieHorde(-5, "Dider");
 	return (0);
 }

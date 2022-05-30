@@ -9,6 +9,9 @@ OBJS = ${SRCS:.cpp=.o}
 
 all: $(NAME)
 
+%.o : %.cpp
+	$(CC) $(FLAGS) -o $@ -c $<
+	
 $(NAME): $(OBJS)
 		$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 

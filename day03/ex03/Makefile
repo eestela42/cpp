@@ -8,6 +8,9 @@ SRCS = main.cpp			\
 		DiamondTrap.cpp
 OBJ = ${SRCS:.cpp=.o}
 
+%.o : %.cpp
+	$(CC) $(FLAGS) -o $@ -c $<
+	
 all: $(NAME)
 
 $(NAME): $(OBJ)

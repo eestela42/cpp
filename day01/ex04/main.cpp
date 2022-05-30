@@ -16,27 +16,26 @@ int		main(int ac, char **av)
 	std::string file_name = std::string(av[1]);
 	std::string origin = std::string(av[2]);
 	std::string replace = std::string(av[3]);
-	std::ifstream is (file_name, std::ifstream::in);
+	std::ifstream is (file_name.c_str(), std::ifstream::in);
 	if (!is.is_open())
 	{
 		std::cout << "Error when opening the file" << std::endl;
 		return (1);
 	}
-	std::ofstream os (file_name + ".replace", std::ios_base::out);
+	std::ofstream os ((file_name + ".replace").c_str(), std::ios_base::out);
 	if (is.is_open() && os.is_open())
 	{
 		is.seekg (0, is.end);
     	int length = is.tellg();
     	is.seekg (0, is.beg);
 		char * buffer = new char [length + 1];
-		is.read (buffer,length); // check si read nul term
+		is.read (buffer,length);
 		std::string str (buffer);
 		delete[] buffer;
 		is.close();
 		int i = 0;
 		int j;
 		int start;
-		int end;
 		while (str[i])
 		{
 			j = 0;
@@ -46,7 +45,6 @@ int		main(int ac, char **av)
 			if (j > 0 && !origin[j])
 			{
 				os << replace;
-				start + (int)str.length();
 			}
 			else
 			{

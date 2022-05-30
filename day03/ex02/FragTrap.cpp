@@ -49,6 +49,11 @@ void	FragTrap::highFivesGuys()
 	
 	std::cout << this->_name << " : Do you want to HIGH FIVE ma man ? (yes/no)" << std::endl;
 	std::getline(std::cin, str);
+	if (std::cin.eof())
+	{
+		str = "";
+		std::cin.clear();
+	}
 	if (str == "yes")
 		std::cout << "*CLAP*" << std::endl << "YES ! Nice broo !" << std::endl;
 	else if (str == "no")

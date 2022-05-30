@@ -67,7 +67,7 @@ std::ostream &operator<<(std::ostream &ostream, Form &tmp)
 {
 	ostream <<  tmp.getName()
 			<< " : is a form with a sign grade of " << tmp.getSignGrade()
-			<< " execution grade of " << tmp.getExeGrade()
+			<< "  an execution grade of " << tmp.getExeGrade()
 			<< " Signed status : " << tmp.getIsSigned();
 	return (ostream);
 }

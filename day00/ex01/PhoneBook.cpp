@@ -12,27 +12,57 @@ void	PhoneBook::input_info()
 
 	while (str == "")	{
 		std::cout << "Enter the name :";
-		std::getline(std::cin,str);		}
+		std::getline(std::cin,str);
+		if (std::cin.eof())
+		{
+			str = "";
+			std::cin.clear();
+			std::cout << std::endl;
+		}		}
 	Repertory[i].setName(str);
 	str = "";
 	while (str == "")	{
 		std::cout << "Enter the last name :";
-		 std::getline(std::cin,str);	}
+		std::getline(std::cin,str);
+		if (std::cin.eof())
+		{
+			str = "";
+			std::cin.clear();
+			std::cout << std::endl;
+		}	}
 	Repertory[i].setLast_name(str);
 	str = "";
 	while (str == "")	{
 		std::cout << "Enter the nickname :";
-		std::getline(std::cin,str);	}
+		std::getline(std::cin,str);
+		if (std::cin.eof())
+		{
+			str = "";
+			std::cin.clear();
+			std::cout << std::endl;
+		}	}
 	Repertory[i].setNickname(str);
 	str = "";
 	while (str == "")	{
 		std::cout << "Enter the phone number :";
-		std::getline(std::cin,str);	}
+		std::getline(std::cin,str);
+		if (std::cin.eof())
+		{
+			str = "";
+			std::cin.clear();
+			std::cout << std::endl;
+		}	}
 	Repertory[i].setPhone_number(str);
 	str = "";
 	while (str == "")	{
 		std::cout << "Enter the DARKEST SECRET :";
-		std::getline(std::cin,str);	}
+		std::getline(std::cin,str);
+		if (std::cin.eof())
+		{
+			str = "";
+			std::cin.clear();
+			std::cout << std::endl;
+		}	}
 	Repertory[i].setDarkest_secret(str);
 }
 
@@ -67,6 +97,12 @@ void	PhoneBook::search()
 	}
 	std::cout << "Put the desired index :";
 	std::getline(std::cin, str);
+	if (std::cin.eof())
+	{
+		str = "";
+		std::cin.clear();
+			std::cout << std::endl;
+	}
 	if (str.empty())
 		std::cout << "You have enter no index, please SEARCH again." << std::endl;
 	else

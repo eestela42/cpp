@@ -1,5 +1,4 @@
 #include "Form.hpp"
-#include 
 
 int main()
 {
@@ -13,6 +12,7 @@ int main()
 		Form		crucial("Crucial", 1);
 		Form		tab[3] = {low, medium, crucial};
 
+		std::cout << "TEST : " << master << std::endl << crucial << std::endl;
 		for (int i = 0; i < 3; i++)
 		{
 			noob.signForm(tab[i]);

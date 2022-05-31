@@ -116,14 +116,14 @@ Fixed	Fixed::operator*(const Fixed &nbr)
 {
 	Fixed	tmp;
 	
-	tmp.setRawBits(this->toInt() * nbr.toInt() * (1 << this->_dot));
+	tmp.setRawBits((int)((float)this->_value * (float)nbr._value / ( 1 << this->_dot)));
 	return tmp;
 }
 Fixed	Fixed::operator/(const Fixed &nbr)
 {
 	Fixed	tmp;
 
-	tmp.setRawBits((this->toInt() / nbr.toInt()) * ( 1 << this->_dot));
+	tmp.setRawBits((int)((float)this->_value / (float)nbr._value * ( 1 << this->_dot)));
 	return tmp;
 }
 // IL Y A DES PROBELEMS

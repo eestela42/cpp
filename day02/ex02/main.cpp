@@ -15,12 +15,18 @@ return 0;
 */
 int main ()
 {
-	Fixed a(35);
-	Fixed b(36000);
+	int f1 = -21438;
+	int f2 = 23647;
+	Fixed a(f1);
+	Fixed b(f2);
 
+	std::cout << "diff in value" << std::endl;
+	std::cout << f1 << " " << a << std::endl;
+	std::cout << f2 << " " << b << std::endl;
 	if ( a > b)
 		std::cout << "error\n";
 	else
 		std::cout << "good\n";
-	std::cout << b + a << " = " << 36000 + 35 << std::endl;
+	std::cout << b / a << " divi " << f2 / f1 << std::endl;
+	std::cout << b * a << " mult " << f2 * f1 << std::endl;
 }

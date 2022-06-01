@@ -26,6 +26,21 @@ int main()
 	{
 		std::cout << Leo << std::endl << Mini << std::endl << Max << std::endl
 			<< Randy << std::endl;
+		Leo.upgrade();
+	}
+	catch(Bureaucrat::GradeTooHighException &e)
+	{
+		std::cout << "Someone tried to take control DANGER !" << std::endl;
+	}
+	catch(Bureaucrat::GradeTooLowException &e)
+	{
+		std::cout << "Someone is so bad he must be fired NOW !" << std::endl;
+	}
+
+	try
+	{
+		std::cout << Leo << std::endl << Mini << std::endl << Max << std::endl
+			<< Randy << std::endl;
 		Mini.downgrade();
 	}
 	catch(Bureaucrat::GradeTooHighException &e)

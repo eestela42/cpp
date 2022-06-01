@@ -40,7 +40,7 @@ void	ShrubberyCreationForm::action() const
     ||     \n\
 ";
 		std::string file(this->getTarget() + "_shrubbery");
-		std::ofstream os (file.c_str(), std::ios::binary);
+		std::ofstream os (file.c_str());
 
 		if (!os.is_open())
 			throw ShrubberyCreationForm::GardeningExeption();

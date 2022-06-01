@@ -2,10 +2,11 @@
 # define FIXED_HPP
 
 #include <iostream>
+
 class Fixed
 {
 private:
-	int			_value;
+	int					_value;
 	const int static	_dot = 8;
 public:
 	Fixed();

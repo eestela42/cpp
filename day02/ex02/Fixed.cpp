@@ -126,7 +126,6 @@ Fixed	Fixed::operator/(const Fixed &nbr)
 	tmp.setRawBits((int)((float)this->_value / (float)nbr._value * ( 1 << this->_dot)));
 	return tmp;
 }
-// IL Y A DES PROBELEMS
 /* iterators */
 
 Fixed	Fixed::operator++(void)

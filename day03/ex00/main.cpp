@@ -4,8 +4,9 @@ int	main()
 {
 	ClapTrap	num1;
 	ClapTrap	num2("Joeh Bideon");
-	ClapTrap	num3 = num2;
+	ClapTrap	num3;
 	ClapTrap	num0(num2);
+	num3 = num1;
 
 	int i = 0;
 	while (i < 11)

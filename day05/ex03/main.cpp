@@ -42,4 +42,6 @@ int main()
 		}
 	}
 
+	randy.makeForm("job request", "randy");
+
 }

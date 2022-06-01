@@ -13,10 +13,11 @@ std::cout << Fixed::max( a, b ) << std::endl;
 return 0;
 }
 */
+///*
 int main ()
 {
-	int f1 = -21438;
-	int f2 = 23647;
+	float f1 = -35;
+	float f2 = 1200;
 	Fixed a(f1);
 	Fixed b(f2);
 
@@ -27,6 +28,12 @@ int main ()
 		std::cout << "error\n";
 	else
 		std::cout << "good\n";
+	std::cout << b + a << " add " << f2 + f1 << std::endl;
+	std::cout << b - a << " sous " << f2 - f1 << std::endl;
 	std::cout << b / a << " divi " << f2 / f1 << std::endl;
 	std::cout << b * a << " mult " << f2 * f1 << std::endl;
+	std::cout << "Min " << a << " " << b << " is " << a.min(a,b) << std::endl;
+	std::cout << "Max " << a << " " << b << " is " << a.max(a,b) << std::endl;
+
 }
+//*/

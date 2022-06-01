@@ -1,6 +1,6 @@
 #include "Animal.hpp"
 
-Animal::Animal(/* args */)
+Animal::Animal(/* args */) : type("")
 {
 	std::cout << "Animal default costructor" << std::endl;
 }

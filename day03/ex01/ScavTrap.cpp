@@ -34,7 +34,7 @@ ScavTrap::ScavTrap(ScavTrap &tmp)
 
 ScavTrap	&ScavTrap::operator=(const ScavTrap &tmp)
 {
-	std::cout << "ClapTrap operator = called" << std::endl;
+	std::cout << "ScavTrap operator = called" << std::endl;
 	_attackDamage = tmp._attackDamage;
 	_name = tmp._name;
 	this->_hitPoints = tmp._hitPoints;

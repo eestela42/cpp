@@ -26,10 +26,7 @@ FragTrap::FragTrap(std::string str)
 FragTrap::FragTrap(FragTrap &tmp)
 {
 	std::cout << "A FragTrap has spawned with copy, he is also named " << tmp._name << std::endl;
-	this->_name = tmp._name;
-	this->_hitPoints = 100;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
+	*this = tmp;
 }
 
 FragTrap	&FragTrap::operator=(const FragTrap &tmp)
@@ -63,5 +60,7 @@ void	FragTrap::highFivesGuys()
 		<< "Yea good job MAN, is it your first one ? You don't seem familiar with this aha"
 		<< std::endl;
 	std::getline(std::cin, str);
+	str = "";
+	std::cin.clear();
 	return ;
 }

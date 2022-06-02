@@ -30,13 +30,13 @@ public:
 	virtual void 	action() const = 0;
 
 	Form	&operator=(const Form &tmp);
-	class GradeTooHighException : std::exception
+	class GradeTooHighException : public std::exception
 	{};
 
-	class GradeTooLowException : std::exception
+	class GradeTooLowException : public std::exception
 	{};
 
-	class CannotExecuteFormExeption : std::exception
+	class CannotExecuteFormExeption : public std::exception
 	{};
 };
 

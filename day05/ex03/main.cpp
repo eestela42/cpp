@@ -4,8 +4,9 @@
 #include "Intern.hpp"
 
 int main()
-{;
-
+{
+	try
+	{
 	Bureaucrat	noob("Noob", 150);
 	Bureaucrat	mid("Mid", 75);
 	Bureaucrat	master("master", 1);
@@ -14,7 +15,7 @@ int main()
 
 	Form *tab[3] = {randy.makeForm("robotomy request", "Juda"),
 					randy.makeForm("presidential pardon", "DSK"),
-					randy.makeForm("shrubbery creation", "Le musee ne reviendra pas")};
+					randy.makeForm("shrubbery creatio", "Le musee ne reviendra pas")};
 
 	std::cout << std::endl << "----All Bureaucrats try to execute non signed form copy (of pardon)" << std::endl;
 
@@ -43,5 +44,10 @@ int main()
 	}
 
 	randy.makeForm("job request", "randy");
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "something went wrong" << std::endl;
+	}
 
 }

@@ -29,7 +29,7 @@ $(NAME) : $(OBJS) $(INC)
 		$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean :
-		rm -f $(OBJS)
+		rm -f $(OBJS) Park_shrubbery
 
 fclean : clean
 		rm -f $(NAME)

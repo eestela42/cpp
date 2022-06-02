@@ -63,7 +63,7 @@ void	Form::beSigned(const Bureaucrat &guy)
 void	Form::execute(Bureaucrat const & executor) const
 {
 	if (!this->isSigned || executor.getGrade() > this->exeGrade)
-		throw Form::CannotExecuteFormExeption() ;
+		throw Form::CannotExecuteFormException() ;
 	action();
 }
 

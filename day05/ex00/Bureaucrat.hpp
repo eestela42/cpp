@@ -25,11 +25,11 @@ public :
 	int	getGrade();
 
 
-	class GradeTooHighException : std::exception
+	class GradeTooHighException : public std::exception
 	{
 	};
 
-	class GradeTooLowException : std::exception
+	class GradeTooLowException : public std::exception
 	{
 	};
 };

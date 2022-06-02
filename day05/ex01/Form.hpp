@@ -26,10 +26,10 @@ public:
 	void	beSigned(Bureaucrat &guy);
 
 	Form	&operator=(Form &tmp);
-	class GradeTooHighException : std::exception
+	class GradeTooHighException : public std::exception
 	{};
 
-	class GradeTooLowException : std::exception
+	class GradeTooLowException : public std::exception
 	{};
 };
 

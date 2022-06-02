@@ -28,7 +28,7 @@ void	ShrubberyCreationForm::action() const
 {
 	try
 	{
-	std::string    shrubber =
+		std::string    shrubber =
 "\n\
   .oOOo.  \n\
  .o00oOo. \n\
@@ -40,10 +40,10 @@ void	ShrubberyCreationForm::action() const
     ||     \n\
 ";
 		std::string file(this->getTarget() + "_shrubbery");
-		std::ofstream os (file.c_str());
+		std::ofstream os (file.c_str(), std::ios_base::app);
 
 		if (!os.is_open())
-			throw ShrubberyCreationForm::GardeningExeption();
+			throw ShrubberyCreationForm::GardeningException();
 		os << shrubber;
 	}
 	catch (std::exception &e)

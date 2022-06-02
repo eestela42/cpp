@@ -27,11 +27,11 @@ public :
 	int		getGrade();
 	void	signForm(Form &form);
 
-	class GradeTooHighException : std::exception
+	class GradeTooHighException : public std::exception
 	{
 	};
 
-	class GradeTooLowException : std::exception
+	class GradeTooLowException : public std::exception
 	{
 	};
 };

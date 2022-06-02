@@ -18,7 +18,7 @@ public:
 	virtual void action() const;
 	
 	ShrubberyCreationForm &operator=(ShrubberyCreationForm const & rhs);
-	class GardeningExeption : std::exception
+	class GardeningExeption : public std::exception
 	{};
 };
 

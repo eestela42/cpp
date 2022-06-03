@@ -1,8 +1,11 @@
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = ex00
+NAME = scalarConvertor
 
-SRCS = main.cpp 
+INC = struct.hpp
+
+SRCS = 	main.cpp	\
+		manager.cpp
 
 OBJ = ${SRCS:.cpp=.o}
 
@@ -11,7 +14,7 @@ OBJ = ${SRCS:.cpp=.o}
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(OBJ) $(INC)
 		$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean : 

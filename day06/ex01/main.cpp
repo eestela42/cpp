@@ -1,9 +1,6 @@
 #include <iostream>
-
-struct Data
-{
-	int i;
-};
+#include <stdint.h>
+#include "data.hpp"
 
 uintptr_t serialize(Data* ptr)
 {
@@ -15,9 +12,14 @@ Data* deserialize(uintptr_t raw)
 	return (reinterpret_cast<Data*>(raw));
 }
 
-int	main(int ac, char **av)
+int	main()
 {
-	
-	
+	Data	*data = new Data;
+
+	data->i = 5;
+	data->c = 'a';
+	data = deserialize(serialize(data));
+	std::cout << data->i << "  " << data->c << std::endl;
+	delete data;
 
 }

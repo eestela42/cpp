@@ -1,7 +1,7 @@
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = ex01
-
+NAME = TypeIdentificator
+INC = main.hpp
 SRCS = main.cpp
 
 OBJ = ${SRCS:.cpp=.o}
@@ -11,7 +11,7 @@ OBJ = ${SRCS:.cpp=.o}
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(OBJ) $(INC)
 		$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean : 

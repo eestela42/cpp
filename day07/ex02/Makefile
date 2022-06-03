@@ -1,7 +1,7 @@
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = Serialisation
-INC = data.hpp
+NAME = ex00
+INC = array.hpp
 
 SRCS = main.cpp
 

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+#include <time.h> 
 #include "main.hpp"
 
 Base::~Base()
@@ -22,8 +24,6 @@ Base * generate(void)
 }
 void identify(Base* p)
 {
-	Base *a;
-
 	if (dynamic_cast<A*>(p))
 		std::cout << "A" << std::endl;
 	if (dynamic_cast<B*>(p))
@@ -34,9 +34,11 @@ void identify(Base* p)
 
 void identify(Base& p)
 {
+	Base tmp;
+
 	try
 	{
-		dynamic_cast<A&>(p);
+		tmp = dynamic_cast<A&>(p);
 		std::cout << "A" << std::endl;
 		return ;
 	}
@@ -45,7 +47,7 @@ void identify(Base& p)
 	}
 		try
 	{
-		dynamic_cast<B&>(p);
+		tmp = dynamic_cast<B&>(p);
 		std::cout << "B" << std::endl;
 		return ;
 	}
@@ -53,7 +55,7 @@ void identify(Base& p)
 	{}
 		try
 	{
-		dynamic_cast<C&>(p);
+		tmp =dynamic_cast<C&>(p);
 		std::cout << "C" << std::endl;
 		return ;
 	}

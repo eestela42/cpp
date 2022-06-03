@@ -1,18 +1,17 @@
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = ex00
-INC = 
 
-SRCS = main.cpp
+SRCS = main.cpp 
 
-OBJ = ${SRCS.cpp=.o}
+OBJ = ${SRCS:.cpp=.o}
 
 %.o : %.cpp
 	$(CC) $(FLAGS) -o $@ -c $<
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) $(INC)
+$(NAME) : $(OBJ)
 		$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean : 

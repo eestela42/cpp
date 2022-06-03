@@ -42,7 +42,6 @@ Array<T>::Array(Array &tmp) : _size(tmp._size), _data(new T[tmp._size])
 {
 	for (unsigned int i = 0; i < _size; i++)
 		this->_data[i] = tmp._data[i];
-
 }
 
 template <typename T>
@@ -63,7 +62,7 @@ template <typename T>
 T &Array<T>::operator[](unsigned int i)
 {
 	if (i >= this->_size)
-		throw std::exception();
+		throw std::exception();;
 	return (this->_data[i]);
 }
 
